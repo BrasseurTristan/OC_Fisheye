@@ -1,0 +1,17 @@
+.page {
+  --text-primary: #901C1C;
+  --text-secondary: #666;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-dm-sans);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 0 80px;
+}

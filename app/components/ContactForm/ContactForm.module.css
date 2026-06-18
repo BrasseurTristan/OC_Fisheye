@@ -1,0 +1,118 @@
+.contact {
+    flex-shrink: 0;
+    background-color: #901C1C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 11px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #7a1717;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #DB8876;
+    border-radius: 5px;
+    padding: 35px;
+    width: 100%;
+    max-width: 670px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.title {
+    color: #000;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.close {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    color: #312e2e;
+    font-size: 24px;
+}
+
+.field input,
+.field textarea {
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.field input {
+    height: 50px;
+}
+
+.submit {
+    align-self: flex-start;
+    margin-top: 20px;
+    background-color: #901C1C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #7a1717;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 44px;
+    }
+}
