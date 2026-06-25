@@ -7,7 +7,6 @@ import PhotographerCard from './components/PhotograherCard/PhotographerCard';
 export default async function Home() {
 
   const photographers = await getAllPhotographers();
-  console.log(photographers);
   
   return (
     <div className={styles.page}>

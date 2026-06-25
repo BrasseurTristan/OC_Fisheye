@@ -5,20 +5,23 @@ import PhotographerHeader from '@/app/components/PhotographerHeader/Photographer
 import styles from './page.module.css';
 import Album from '../components/Album/Album';
 
+
 export default async function PhotographerPage({ params }) {
     const { id } = await params;
     const photographer = await getPhotographer(Number(id));
-    const album = await getAllMediasForPhotographer(Number(id))
     if (!photographer) {
         notFound();
     }
-    
+    const album = await getAllMediasForPhotographer(Number(id))
+    const price = photographer.price;
+
     return (
         <div className={styles.page}>
             <Banner />
             <main className={styles.main}>
                 <PhotographerHeader photographer={photographer} />
-                <Album album={album}/>
+                <Album album={album} price={price}/>
+                
             </main>
         </div>
     );
