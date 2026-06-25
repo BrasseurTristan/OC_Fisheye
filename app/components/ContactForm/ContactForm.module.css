@@ -12,7 +12,8 @@
 }
 
 .contact:hover {
-    background-color: #7a1717;
+    background-color: var(--button-secondary-hover);
+    color: #000;
 }
 
 .overlay {
@@ -108,7 +109,8 @@
 }
 
 .submit:hover {
-    background-color: #7a1717;
+    background-color: var(--button-secondary-hover);
+    color: #000;
 }
 
 @media (max-width: 600px) {

@@ -25,7 +25,7 @@ export default function ContactForm({ photographerName }) {
                 type="button"
                 className={styles.contact}
                 aria-haspopup="dialog"
-                aria-label={`Contactez ${photographerName}`}
+                aria-label="Contact Me"
                 onClick={open}
             >
                 Contactez-moi

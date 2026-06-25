@@ -1,6 +1,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --text-primary: #901C1C;
+  --text-secondary: #D3573C;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #D3573C;
+  --button-secondary-border: #901C1C;
 }
 
 @media (prefers-color-scheme: dark) {

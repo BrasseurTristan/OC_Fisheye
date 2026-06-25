@@ -3,28 +3,31 @@
   --foreground: #fff;
 
   --text-primary: #901C1C;
-  --text-secondary: #666;
+  --text-secondary: #D3573C;
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: var(--font-dm-sans);
 }
 
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-items: center;
   gap: 80px 60px;
   width: 100%;
   background-color: var(--foreground);
   padding: 120px 60px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* Enable hover only on non-touch devices */
@@ -45,9 +48,5 @@
 
     --text-primary: #ededed;
     --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
   }
 }
