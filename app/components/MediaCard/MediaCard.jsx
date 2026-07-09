@@ -1,17 +1,24 @@
+'use client'
+
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './MediaCard.module.css'
 
-export default function MediaCard({ media }) {
+export default function MediaCard({ media, liked, onLike }) {
     const { title, image, video, likes } = media;
 
     return (
         <article className={styles.card}>
-            <div className={styles.thumbnail}>
+            <Link
+                href={`?media=${media.id}`}
+                scroll={false}
+                className={styles.thumbnail}
+                aria-label={`Ouvrir ${title} en grand`}
+            >
                 {video ? (
                     <video
                         className={styles.media}
                         src={`/${video}`}
-                        controls
                         preload="metadata"
                         aria-label={title}
                     />
@@ -25,13 +32,21 @@ export default function MediaCard({ media }) {
                         sizes="(max-width: 600px) 100vw, 350px"
                     />
                 )}
-            </div>
+            </Link>
 
             <div className={styles.infos}>
                 <h2 className={styles.title}>{title}</h2>
                 <p className={styles.likes}>
                     <span>{likes}</span>
-                    <span aria-label='likes'>&#9829;</span>
+                    <button
+                        type='button'
+                        className={styles.likeButton}
+                        onClick={() => onLike(media)}
+                        aria-label='likes'
+                        aria-pressed={liked}
+                    >
+                        &#9829;
+                    </button>
                 </p>
             </div>
         </article>

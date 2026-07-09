@@ -11,6 +11,10 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: #f0f0f0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    display: block;
 }
 
 .media {
@@ -40,6 +44,32 @@
     gap: 6px;
     font-size: 24px;
     font-weight: 500;
+}
+
+.likeButton {
+    padding: 0;
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.likeButton:hover {
+    transform: scale(1.2);
+}
+
+.likeButton[aria-pressed="true"] {
+    color: var(--text-primary, #901C1C);
+    cursor: default;
+}
+
+.likeButton:focus-visible {
+    outline: 2px solid var(--text-primary, #901C1C);
+    outline-offset: 2px;
+    border-radius: 3px;
 }
 
 .srOnly {
