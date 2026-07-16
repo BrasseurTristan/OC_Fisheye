@@ -58,8 +58,8 @@ export default function ContactForm({ photographerName }) {
 
                         <form className={styles.form} onSubmit={handleSubmit}>
                             <div className={styles.field}>
-                                <label id="label-prenom" htmlFor="prenom">Prénom</label>
-                                <input id="prenom" type="text" name="prenom" aria-labelledby="label-prenom" />
+                                <label htmlFor="prenom">Prénom</label>
+                                <input id="prenom" type="text" name="prenom" />
                             </div>
 
                             <div className={styles.field}>
@@ -73,8 +73,8 @@ export default function ContactForm({ photographerName }) {
                             </div>
 
                             <div className={styles.field}>
-                                <label id="label-message" htmlFor="message">Votre message</label>
-                                <textarea id="message" name="message" rows={5} aria-labelledby="label-message" />
+                                <label htmlFor="message">Votre message</label>
+                                <textarea id="message" name="message" rows={5} />
                             </div>
 
                             <button type="submit" className={styles.submit}>Envoyer</button>
