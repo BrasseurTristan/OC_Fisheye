@@ -47,7 +47,7 @@ export default function ContactForm({ photographerName }) {
                             <button
                                 type="button"
                                 className={styles.close}
-                                aria-label="Fermer le formulaire de contact"
+                                aria-label="Close contact form"
                                 onClick={close}
                             >
                                 <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden="true">
