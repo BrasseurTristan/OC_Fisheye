@@ -63,7 +63,6 @@ export default function Lightbox({ media, prevHref, nextHref, closeHref }) {
                             className={styles.media}
                             src={`/${video}`}
                             controls
-                            autoPlay
                             aria-label={title}
                         />
                     ) : (

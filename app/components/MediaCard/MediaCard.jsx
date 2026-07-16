@@ -13,7 +13,7 @@ export default function MediaCard({ media, liked, onLike }) {
                 href={`?media=${media.id}`}
                 scroll={false}
                 className={styles.thumbnail}
-                aria-label={`Ouvrir ${title} en grand`}
+                aria-label={`${title}, closeup view`}
             >
                 {video ? (
                     <video
@@ -36,7 +36,7 @@ export default function MediaCard({ media, liked, onLike }) {
 
             <div className={styles.infos}>
                 <h2 className={styles.title}>{title}</h2>
-                <p className={styles.likes}>
+                <div className={styles.likes}>
                     <span>{likes}</span>
                     <button
                         type='button'
@@ -47,7 +47,7 @@ export default function MediaCard({ media, liked, onLike }) {
                     >
                         &#9829;
                     </button>
-                </p>
+                </div>
             </div>
         </article>
     )

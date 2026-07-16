@@ -7,8 +7,8 @@ export default function PhotographerCard({props}) {
     const {id,portrait,name,tagline,price,city, country} = props;
     return(
       <article className={styles.card}>
-        <Link href={`/${id}`} className={styles.cardLink}>
-            <Image className={styles.portrait} src={`/${portrait}`} alt={name} width={200} height={200} loading="eager"/>
+        <Link alt={name} href={`/${id}`} className={styles.cardLink}>
+            <Image className={styles.portrait} src={`/${portrait}`} alt="" width={200} height={200} loading="eager"/>
             <h2 className={styles.name}>{name}</h2>
         </Link>
         <div className={styles.info}>
