@@ -63,13 +63,13 @@ export default function ContactForm({ photographerName }) {
                             </div>
 
                             <div className={styles.field}>
-                                <label id="label-nom" htmlFor="nom">Nom</label>
-                                <input id="nom" type="text" name="nom" aria-labelledby="label-nom" />
+                                <label htmlFor="nom">Nom</label>
+                                <input id="nom" type="text" name="nom" />
                             </div>
 
                             <div className={styles.field}>
-                                <label id="label-email" htmlFor="email">Email</label>
-                                <input id="email" type="email" name="email" aria-labelledby="label-email" />
+                                <label htmlFor="email">Email</label>
+                                <input id="email" type="email" name="email" />
                             </div>
 
                             <div className={styles.field}>
