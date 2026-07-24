@@ -16,25 +16,20 @@
     color: #000;
 }
 
-.overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    z-index: 1000;
-}
-
 .modal {
+    margin: auto;
     background-color: #DB8876;
+    border: none;
     border-radius: 5px;
     padding: 35px;
     width: 100%;
     max-width: 670px;
     max-height: 90vh;
     overflow-y: auto;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modalHeader {
