@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -17,15 +17,10 @@ export default function Lightbox({ media, prevHref, nextHref, closeHref }) {
         }
     }, [])
 
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === 'ArrowLeft') router.push(prevHref, { scroll: false })
-            if (event.key === 'ArrowRight') router.push(nextHref, { scroll: false })
-        }
-
-        document.addEventListener('keydown', handleKeyDown)
-        return () => document.removeEventListener('keydown', handleKeyDown)
-    }, [router, prevHref, nextHref])
+    const handleKeyDown = (event) => {
+        if (event.key === 'ArrowLeft') router.push(prevHref, { scroll: false })
+        if (event.key === 'ArrowRight') router.push(nextHref, { scroll: false })
+    }
 
     if (!media) return null
 
@@ -37,6 +32,9 @@ export default function Lightbox({ media, prevHref, nextHref, closeHref }) {
             role="dialog"
             aria-modal="true"
             aria-label="image closeup view"
+            tabIndex={-1}
+            ref={(node) => node?.focus()}
+            onKeyDown={handleKeyDown}
         >
             <div className={styles.content}>
                 <Link
